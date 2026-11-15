@@ -14,7 +14,7 @@ A small PCB keychain, custom designed using seven addressable RGB Leds placed in
 
 ## Hardware
 
-- ATtiny412 microcontroller
+- ATtiny1614 microcontroller
 - SK6812 Mini-e rgb leds x7
 - Accelerometer
 - Li-ion puch cell
