@@ -16,14 +16,16 @@ A small PCB keychain, custom designed using seven addressable RGB Leds placed in
 
 - ATtiny1614 microcontroller
 - SK6812 Mini-e rgb leds x7
-- Accelerometer
+- Accelerometer, preferably LIS2DH12
 - Li-ion puch cell
 - MCP73831 single  cell li-ion charger IC
+- MCP1700-3302 regulator 
 - USB-c charging port
 - tacticle button
 - slide switch as power switch
 - 100nF and 10uF capacitors for decouplling
 - 330ohm resistor
+- 402030 li-ion pouch cell.
 
 ## Status
 
