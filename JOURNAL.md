@@ -64,3 +64,5 @@ Now we need to add a 3.3v regulator, so i decided to use MCP1700 regulator to pr
 
 here are the connections so far:
 ![schematics](https://cdn.hackclub.com/01a1e5e9-c6a2-7632-a689-4176393a33bf/Screenshot%202026-11-17%20012056.png)
+
+**Total time spent: 1h 23min**
