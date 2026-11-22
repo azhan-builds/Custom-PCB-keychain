@@ -66,3 +66,24 @@ here are the connections so far:
 ![schematics](https://cdn.hackclub.com/01a1e5e9-c6a2-7632-a689-4176393a33bf/Screenshot%202026-11-17%20012056.png)
 
 **Total time spent: 1h 23min**
+
+# November 17: added battery monitoring section and microcontroller has been integrated
+
+Last night, i completed the power management section, and today i started working on the battery sensing section.
+
+I want the microcontroller to monitor the battery level so i designed a simple voltage divider using 2 1Mohm resistors. The two resistors, R5 and R6 are connected in series between battery and GND. The junction between R5 and R6 will be connected to microcontroller's ADC input.
+![voltage divider](https://cdn.hackclub.com/01a1e82e-b31c-7a85-9c22-6fd0d50b3a48/Screenshot%202026-11-17%20115526.png)
+
+This voltage divider helps in dividing the bettery voltage into half.
+
+Next, i added the microcontroller ATtiny1614-SS to the schematics. I will be using the microcontroller to control the leds, monitor battery level, button and a few other things(each will be discussed)
+![ATtiny1614](https://cdn.hackclub.com/01a1e82e-0fbc-7705-ba43-4ec9373f355c/Screenshot%202026-11-17%20115348.png)
+
+i went forward and connected the microcontroller to 3.3v output ofthe regulator. I also added 100nF capacitor between the power supply and gnd to stabalize the power supply.
+![microcontroller power connection](https://cdn.hackclub.com/01a1e835-15f6-735e-b5fc-50ddc3096346/Screenshot%202026-11-17%20120226.png)
+
+Now for the microcontroller's signal connection, i added two resistors 4.7k(R7) ohm and 330ohm(R8) respectively.
+R7 is connected to PA0, and will be used for programming. R8 is connected to PA1, which will be carrying sgnal to the addressable led.
+![resistors](https://cdn.hackclub.com/01a1e83a-454e-7472-8fda-43125839feb0/Screenshot%202026-11-17%20120805.png)
+
+**total time spent: 45min**
