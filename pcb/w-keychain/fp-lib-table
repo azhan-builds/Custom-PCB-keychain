@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "custom_W")(type "KiCad")(uri "${KIPRJMOD}/custom_W.pretty")(options "")(descr "Project footprints"))
+)

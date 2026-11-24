@@ -87,3 +87,49 @@ R7 is connected to PA0, and will be used for programming. R8 is connected to PA1
 ![resistors](https://cdn.hackclub.com/01a1e83a-454e-7472-8fda-43125839feb0/Screenshot%202026-11-17%20120805.png)
 
 **total time spent: 45min**
+
+# November 23: Added the accelerometer
+After quite a bit of time, i finally got back to the project. Now i began by adding the accelerometer. I've decided to use LIS2DH12 which is a small 3 axis accelerometer that allow the keychain to undersant movement and changes in orientation.
+
+I couldn't fint the exact symbol for this component in kicad's symbol library so I built a custom symbol
+![LIS2DH12 custom symbol](https://cdn.hackclub.com/01a20805-8169-75c4-9d76-e4e11a6f656a/Screenshot%202026-11-23%20161738.png)
+
+Next i needed the correct footprint, which i found easily on github. I downloaded it and assigned it to my symbol.
+![footprint for accelerometer](https://cdn.hackclub.com/01a20807-8c7a-7d42-822f-8eac000905b4/Screenshot%202026-11-23%20162033.png)
+I found it at: https://github.com/KiCad/kicad-footprints/blob/master/Package_LGA.pretty/LGA-12_2x2mm_P0.5mm.kicad_mod
+
+With that, the accelerometer was in place and the next step was wiring. So let's get into it.
+
+I started with the power connection, connecting VDD and VDD_IO to 3.3v supply and i also added two 100nF capcacitors for decoupling. The 3 ground pins and the RES pins were connected to GND.
+![power connection](https://cdn.hackclub.com/01a20867-3672-7997-b89e-f7249c1a61fc/Screenshot%202026-11-23%20163534.png)
+
+Next i made sure the sensor is configured to use I2C communication. For which I connected the CS(pin2) of the sensor pin to 3.3v so it selects I2C mode, while SA0 was connected to GNd in order to set its I2C address to 0x18.
+
+I also added two 4.7k ohm pull up resistor for the communication line SDA and SCL. I went forward the connected SDA and SCL to PB1 and PB0 of the microcontroller respectivtly.
+
+Then i connected INT1 pin of the sensor to the PA3 pin of the microcontroller. INT2 was left unconneccted for now
+![screenshot](https://cdn.hackclub.com/01a208a7-7f15-706a-8694-21a910481cab/Screenshot%202026-11-23%20191510.png)
+
+**Total time spent: 1hour**
+
+# November 24: changes in led and power design
+I moved on to the led part of the schematics. As mentioned earlier, the plan was to use 7 leds. But now i will be using 11 addressable leds.
+
+I search the kicad's symbol library, and found the exact match for the leds that is SK6812MINI-E. I checked its pins and stuff and verified everything.
+![led](https://cdn.hackclub.com/01a20c41-0fe5-723e-8e3a-74b5d21c7f63/Screenshot%202026-11-24%20120145.png)
+
+I then placed 11 led symbol and started connecting them in a chain. The PA1 pin of the microcontroller will be used to control the leds, and that pin passes from the existing 330ohm resistor (R8) and enter the DIN pin of the first led. Each led's dout pin connects to the next led's Din pin. This way, all the leds could be controlled using a single data line.
+![led connection](https://cdn.hackclub.com/01a20c45-12a0-79f0-93e9-4c37567ae66e/Screenshot%202026-11-24%20120606.png)
+
+However, there is one problem. While going over the datasheet of these leds, i noticed that these leds require a voltage supply of 5.5v to 3.7v. Our li ion battery's voltage drops as it discharges. Supplying the voltage directly from the battery could potentially cause some problems.
+
+After researching for a while, i decided on to use a 5V boost converter. The plan is to use a TPS61022 to step up the battery voltage to 5V. I also realized that we will need a logic level shifter between microcontroller and led. So i am currently moving on to that.
+
+I added the boost converter, but kept the microcontroller and the accelerometer on 3.3v supply. I added SN74AHCT1G125 buffer to convert 3.3v data signal coming from microcontroller to 5v signal for the LEDs
+
+I completed the led array, connected 5v to each led and gnd too. The data line passed from one led to another.
+I also added 3 pin connector for programming the keychain. The pins are 3V3, GND, and UPDI 
+
+I ran ERC, faced a few errors but fixed them swiftly so that's no issue. This completes the scheamatics of the keychain, and the next stop is the PCB design.
+
+**Total time spent: 2hours 19mins**
