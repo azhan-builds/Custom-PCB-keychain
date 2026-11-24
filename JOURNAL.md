@@ -137,5 +137,8 @@ I ran ERC, faced a few errors but fixed them swiftly so that's no issue. This co
 # November 25: Footprints assigned
 
 Today, i assigned footprints to each of the component. The resistors and capacitors were the easy part, cuz most of them used the same footprint. Resistors and capacitors got 0603 except a few. A few other problems and researching later, i finished the assinging. Now i will be moving on to the pcb part. 
+footprints:
+![footprints](https://cdn.hackclub.com/01a20f05-9cf4-7ad4-942c-5234c162609a/Screenshot%202026-11-25%20005540.png)
+![footprints](https://cdn.hackclub.com/01a20f06-7802-7aa7-a2b9-b637d66afda1/Screenshot%202026-11-25%20005642.png)
 
 **Total time spent: 45mins**
