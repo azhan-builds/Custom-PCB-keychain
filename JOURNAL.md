@@ -133,3 +133,9 @@ I also added 3 pin connector for programming the keychain. The pins are 3V3, GND
 I ran ERC, faced a few errors but fixed them swiftly so that's no issue. This completes the scheamatics of the keychain, and the next stop is the PCB design.
 
 **Total time spent: 2hours 19mins**
+
+# November 25: Footprints assigned
+
+Today, i assigned footprints to each of the component. The resistors and capacitors were the easy part, cuz most of them used the same footprint. Resistors and capacitors got 0603 except a few. A few other problems and researching later, i finished the assinging. Now i will be moving on to the pcb part. 
+
+**Total time spent: 45mins**

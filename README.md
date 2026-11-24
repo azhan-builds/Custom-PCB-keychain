@@ -1,6 +1,6 @@
 # Custom PCB keychain
 
-A small PCB keychain, custom designed using seven addressable RGB Leds placed in the shape of an initial('W' here). A button is used to change the animation, and shaking the keychain also changes it.
+A small PCB keychain, custom designed using eleven addressable RGB Leds placed in the shape of an initial('W' here). A button is used to change the animation, and shaking the keychain also changes it.
 
 ## What it does
 

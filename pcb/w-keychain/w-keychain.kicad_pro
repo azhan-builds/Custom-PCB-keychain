@@ -260,7 +260,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|2895600|444500|a4e53779-3c9a-487f-a8dc-1a54a88fda13|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "pin_to_pin|2476500|723900|a12840da-c2ff-457d-91b8-52d57e680737|193e304c-cca7-42c7-8e2f-81419efc62e2|/dbde0857-6859-426c-baf1-1e6ad309680f|/dbde0857-6859-426c-baf1-1e6ad309680f|/dbde0857-6859-426c-baf1-1e6ad309680f",
+        ""
+      ],
+      [
+        "pin_to_pin|3187700|850900|eaf9f37c-3c94-460c-b406-9dc2e26aa9d2|1c1e7f9f-bb68-48a3-b22a-3583ff949dff|/dbde0857-6859-426c-baf1-1e6ad309680f|/dbde0857-6859-426c-baf1-1e6ad309680f|/dbde0857-6859-426c-baf1-1e6ad309680f",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -661,7 +674,7 @@
         "uuid": "dbde0857-6859-426c-baf1-1e6ad309680f"
       }
     ],
-    "used_designators": "R1-10,J1-2,U1-4,C1-7,D1-11,#PWR1-28,SW1-2",
+    "used_designators": "#FLG1-4,R1-12,J1-3,U1-6,C1-22,L1,D1-11,#PWR1-50,SW1-2",
     "variants": []
   },
   "sheets": [
