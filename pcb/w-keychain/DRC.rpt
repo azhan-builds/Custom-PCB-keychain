@@ -1,0 +1,86 @@
+** Drc report for w-keychain.kicad_pcb **
+** Created on 2026-11-26T23:45:35 **
+** Report includes: Errors, Warnings **
+
+** Found 18 DRC violations **
+[lib_footprint_mismatch]: Footprint 'LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount' does not match copy in library 'LED_SMD'
+    Local override; warning
+    @(140.1250 mm, 107.2500 mm): Footprint D3
+[lib_footprint_mismatch]: Footprint 'USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal' does not match copy in library 'Connector_USB'
+    Local override; warning
+    @(146.8750 mm, 114.1000 mm): Footprint J1
+[lib_footprint_mismatch]: Footprint 'LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount' does not match copy in library 'LED_SMD'
+    Local override; warning
+    @(146.8750 mm, 90.7500 mm): Footprint D5
+[lib_footprint_mismatch]: Footprint 'LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount' does not match copy in library 'LED_SMD'
+    Local override; warning
+    @(153.6250 mm, 107.2500 mm): Footprint D7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(141.0251 mm, 98.1879 mm): Reference field of D4
+    @(141.2100 mm, 97.6594 mm): Segment of C6 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(151.0250 mm, 107.2500 mm): Reference field of D7
+    @(151.0350 mm, 107.2613 mm): Segment of C1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(128.6750 mm, 91.3000 mm): Reference field of SW1
+    @(128.5344 mm, 91.6600 mm): Segment of C3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(137.5250 mm, 107.2500 mm): Reference field of D3
+    @(136.8750 mm, 107.9500 mm): Pad 2 [GND] of C10 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(137.5250 mm, 107.2500 mm): Reference field of D3
+    @(136.8750 mm, 106.0500 mm): Pad 1 [LED_5V] of C10 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(141.0251 mm, 98.1879 mm): Reference field of D4
+    @(140.7000 mm, 98.5750 mm): Pad 2 [+3V3] of C6 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(141.0251 mm, 98.1879 mm): Reference field of D4
+    @(140.7000 mm, 97.0250 mm): Pad 1 [GND] of C6 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(146.8750 mm, 109.0000 mm): Reference field of J1
+    @(146.1000 mm, 108.7250 mm): Pad 1 [Net-(J1-CC1)] of R1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(146.8750 mm, 109.0000 mm): Reference field of J1
+    @(147.6500 mm, 108.7250 mm): Pad 1 [Net-(J1-CC2)] of R2 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(151.0250 mm, 107.2500 mm): Reference field of D7
+    @(150.3000 mm, 107.9500 mm): Pad 1 [Net-(U1-V_{DD})] of C1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(151.0250 mm, 107.2500 mm): Reference field of D7
+    @(150.3000 mm, 106.0500 mm): Pad 2 [GND] of C1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(144.2750 mm, 90.7500 mm): Reference field of D5
+    @(143.3500 mm, 89.8100 mm): Pad 8 [Net-(U3-PB1)] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(128.6750 mm, 91.3000 mm): Reference field of SW1
+    @(129.4500 mm, 91.1500 mm): Pad 2 [GND] of C3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(128.6750 mm, 91.3000 mm): Reference field of SW1
+    @(127.9000 mm, 91.1500 mm): Pad 1 [Net-(SW1-A)] of C3 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

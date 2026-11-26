@@ -142,3 +142,49 @@ footprints:
 ![footprints](https://cdn.hackclub.com/01a20f06-7802-7aa7-a2b9-b637d66afda1/Screenshot%202026-11-25%20005642.png)
 
 **Total time spent: 45mins**
+
+# November 27: PCB and routing
+
+With the schematics being completed, i moved on towards the pcb. I ran update PCB from schematic option and everything came in one click.
+
+First step was to decide the shape of the board. The keychain has to fit in the pocket, so i went with a round pcb. I tried various sizes, until i finally settled on 45mm diameter.
+
+However, at 45mm, 11 Leds were too crowded, so i decided to reduce it down to 9. 
+![W shape](https://cdn.hackclub.com/01a21963-bb23-70fb-bb56-a1382aa687e7/Screenshot%202026-11-27%20011426.png)
+
+I decided to keep most of the components on the back, including the leds because the leds are reverse  mount, which meants they sit on the back and shine through small cutouts in the board. The front  part will have only the mode button and tiny capacitors next to each led.
+
+I made three custom foot prints, which inlcuded:
+- 3 round pads for programming the kechain. I did this to avoid soldering a header.
+- 2 pads to solder the battery wires
+- the gold W art for the front.
+
+Then i went forward and placed the rest of the parts, beginning with the leds. And rest of the compoenents around them with the usb-c port being on the bottom edge.
+![pcb](https://cdn.hackclub.com/01a21969-ed06-7e2f-af13-2f55f37e17c8/Screenshot%202026-11-27%20012116.png)
+
+Then i went forward with routing, and this was literal nightmare.
+
+I routed it in several batches like power, 3.3v, 5v rail for leds, signal rail, and more. 
+![routing](https://cdn.hackclub.com/01a2196b-b87d-7a44-9c43-cc7da47b72f4/Screenshot%202026-11-27%20012331.png)
+
+I changed a few things while routing, to make it easier:
+- I swapped two pins on the microcontroller that is ATtiny. The led data line is now on PA4 while the battery sense is on PA5
+- I also removed R4, which acted as a pull up in the STAT pin of charger. The ATtiny has internal pull ups so it's one less part.
+- I had to tie the SA0 pin of the accelerometer to 3.3v instead of GND which changed the I2C address from 0x18 to 0x19.
+- Moved a few small capacitors
+
+Now for ground, i used GND pour on both front and back layer. A few issues arrived, so I fixed them on the hand and moved ahead.
+
+After routing everything in batches, i finally completed it. I ran DRC, a lot of debugging and error handling later, i was able to bring them down. 
+
+So the pcb is now complete, and we shall  move on to the firmware now.
+
+But before the pcb, there is one more thing
+Here is how I used AI fro the job
+- Because the keychain was extremely cluttered, i used AI to give me coordinators so i can arrange everything proerly=
+- I also had the AI check for clearence and various other issue.
+- It suggested a few of the changes, and they were worth changing
+
+Rest everything was done by a human
+
+**Total time spent: 3hours 30mins**
